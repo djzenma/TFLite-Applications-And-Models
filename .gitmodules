@@ -1,0 +1,3 @@
+[submodule "BenchmarkingTool"]
+	path = BenchmarkingTool
+	url = https://github.com/djzenma/TFLite-Benchmarking-Tool.git

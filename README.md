@@ -23,8 +23,8 @@ This repo is composed of the following:
 ------------
 
 
-# Model Reduction (Optimization) Methodology
-## Building Blocks
+## Model Reduction (Optimization) Methodology
+### Building Blocks
 All of the applications mentionned above are time series data, and therefore CNN architectures were suitable for all of them. Most CNNs have kind of a similar structure as this one below: </br>
 Input Layer -> (Conv -> MaxPoolingxPi)xN -> (Dense Layer -> Regularizor)xM -> Output Layer </br>
 
@@ -34,6 +34,6 @@ An important trick in reducing the number of weights in a CNN is adding Pooling 
 
 Now that we have our building blocks, we can define our optimization algorithm.
 
-## Algorithm
+### Algorithm
 
 Optimizing the CNN network can be done by reducing N and M, and varying Pi of every ith Conv Block until we are satisfied with a good compromise of accuracy and weights size values. In fact, applying a search algorithm on these 2 hyperparameters while having as score the accuracy of the network and the weights size leads to the reduced optimized model. The final part is to find a good loss function to feed to the search algorithm for it to minimize it. For now a weighted average of both accuracy and weights size will do the job, but it might be subject to improvement.
